@@ -1,0 +1,3 @@
+﻿@using TypingWebApp
+@using TypingWebApp.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

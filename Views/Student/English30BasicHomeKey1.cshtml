@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="~/js/TickWatch.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        const timerElement = $('.timer');
+        timerElement.TickWatch({
+            direction: 'up',
+            startTime: null,
+            endTime: null,
+            activeCellClass: 'active-cell',
+            inactiveCellClass: 'inactive-cell',
+            partsKeys: ['seconds', 'minutes', { hours: 24 }]
+
+        });
+
+        timerElement.TickWatch('clear');
+        timerElement.TickWatch('start');
+    });
+
+
+</script>
+
+<form>
+    <center>
+        <b><u>Beginner Typing Practice Chapter 1 </u></b>
+        <br /><br />
+        <div class="timer" style="width:200px; height:30px;">
+        </div>
+    </center>
+    <br /><br /><br />
+    <table border="1">
+        <tr>
+            <td>
+                <span style="font-size:150px; font-weight:bold">@ViewBag.Letter</span>
+            </td>
+            <td>
+                <textarea style="height:150px; width:500px;"></textarea>
+            </td>
+        </tr>
+    </table>
+</form>
+

@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "devexpress-richedit": "24.1.7",
+    "devextreme-dist": "24.1.7"
+  }
+}

@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+<form>
+    <table>
+        <tr>
+            <th colspan="3" style="text-align:center; background-color:cadetblue; color:white; font-weight:bold;">
+                English 30 WPM
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Home Key
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" asp-controller="Student" asp-action="English30BasicHomeKey1" target="_blank">Basic Home Key 1 74%</a></li>
+                        <li><a class="dropdown-item" href="#">Basic Home Key 2 93%</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSpeedPass1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Speed Passage
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownSpeedPass1">
+                        <li><a class="dropdown-item" asp-controller="Student" asp-action="SpeedPassage1" target="_blank">Speed Passage</a></li>
+                        
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
