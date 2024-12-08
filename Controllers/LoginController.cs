@@ -1,9 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TypingWebApp.Models;
 
 namespace TypingWebApp.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly dbContext _context;
+        public LoginController(dbContext context) 
+        {
+            _context = context;
+
+        }
         public IActionResult Index()
         {
             return View();
@@ -13,8 +20,10 @@ namespace TypingWebApp.Controllers
             string UserName = Request.Form["username"];
             string Password = Request.Form["password"];
 
+            var user = _context.Users.Where(u => u.Username == UserName && u.Password == Password && u.IsActive == true).FirstOrDefault();
+
             // Student Login
-            if (UserName == "admin" && Password == "admin123")
+            if (user!=null)
             {
                 return RedirectToAction("Dashboard", "Student");
             }

@@ -1,9 +1,12 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using TypingWebApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+builder.Services.AddDbContext<dbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MyDBConnection")));
 
 var app = builder.Build();
 
