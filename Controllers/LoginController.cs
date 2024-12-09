@@ -6,7 +6,7 @@ namespace TypingWebApp.Controllers
     public class LoginController : Controller
     {
         private readonly dbContext _context;
-        public LoginController(dbContext context) 
+        public LoginController(dbContext context)
         {
             _context = context;
 
@@ -22,17 +22,29 @@ namespace TypingWebApp.Controllers
 
             var user = _context.Users.Where(u => u.Username == UserName && u.Password == Password && u.IsActive == true).FirstOrDefault();
 
-            // Student Login
-            if (user!=null)
+            if (user != null)
             {
-                return RedirectToAction("Dashboard", "Student");
+                if (user.RoleId == 1)
+                {
+                    // Student Login
+                    return RedirectToAction("Dashboard", "Student");
+                }else if (user.RoleId == 3)
+                {
+                    // Super Admin Login
+                    return RedirectToAction("Index", "SuperAdmin");
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid Login!";
+                    return View("Index");
+                }
             }
             else
             {
-                ViewBag.Message = "Invalid Username or Password";
+                ViewBag.Message = "Invalid Username or Password!";
                 return View("Index");
             }
-            
+
         }
     }
 }
