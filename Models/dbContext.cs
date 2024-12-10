@@ -12,5 +12,7 @@ namespace TypingWebApp.Models
         }
         public DbSet<Users> Users { get; set; }
         public DbSet<Roles> Roles { get; set; }
+        public DbSet<Institute> Institute { get; set; }      
+        public DbSet<Students> Students { get; set; }
     }
 }

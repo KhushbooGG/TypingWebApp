@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Students>
 @{
     ViewData["Title"] = "StudentReport";
     Layout = "~/Views/Shared/_SuperAdminLayout.cshtml";
@@ -6,3 +6,40 @@
 
 <h1>StudentReport</h1>
 
+
+<table class="table">
+    <tr>
+        <th>
+            Student Name
+        </th>
+        <th>
+            Student Number
+        </th>
+        <th>
+            Institute Name
+        </th>
+        <th>
+            Status
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNumber)
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+    }
+
+</table>
