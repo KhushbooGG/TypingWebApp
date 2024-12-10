@@ -11,6 +11,10 @@ namespace TypingWebApp.Controllers
 
         public IActionResult AddInstitute()
         {
+            string InstituteName = Request.Form["Institutename"];
+            string PrincipalName = Request.Form["principalname"];
+            string InstituteAddress = Request.Form["institutename"];
+          
             return View();
         }
 

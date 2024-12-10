@@ -1,8 +1,104 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "AddInstitute";
     Layout = "~/Views/Shared/_SuperAdminLayout.cshtml";
 }
 
-<h1>AddInstitute</h1>
+<h1>ADD INSTITUTE </h1>
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                Name of Institute
+            </td>
+            <td>
+                <input type="text" name="Institutename" id="Institutename"
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Principal Name
+            </td>
+            <td>
+                <input type="text" name="principalname" id="principalname" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Institute Address
+            </td>
+            <td>
+                <input type="text" name="institutename" id="institutename" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Institute Code
+            </td>
+            <td>
+                <input type="text" name="institutecode" id="institutecode"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Contact No
+            </td>
+            <td>
+                <input type="text" name="contactno" id="contactno"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email Id
+            </td>
+            <td>
+                <input type="email" name="emailid" id="emailid"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                No Of Computer in Lab
+            </td>
+            <td>
+                <input type="number" name="noofcomputerinlab" id="noofcomputerinlab" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Principal Image
+            </td>
+            <td>
+                <input type="text" name="principalimage" id="principalimage" />
+               
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                Institute Symbol
+            </td>
+            <td>
+                <input type="text" name="instituteimage" id="instituteimage" />
+                
+            </td>           
+        </tr>
+        <tr>
+            <td>
+                Status
+            </td>
+            <td>
+                <input type="text" name="status" id="status" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="submit" value="ADD" asp-controller="SuperAdmin" asp-action="AddInstitute" />
+            </td>
+        </tr>
+        
+
+    </table>
+</form>
 
