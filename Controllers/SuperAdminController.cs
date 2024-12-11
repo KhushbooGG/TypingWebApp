@@ -63,10 +63,11 @@ namespace TypingWebApp.Controllers
             var report = _context.Students.ToList();
             return View(report);
         }
-
+            
         public IActionResult InstructorReport()
         {
-            return View();
+            var instructorreport = _context.Instructor.ToList();
+            return View(instructorreport);
         }
     }
 }
