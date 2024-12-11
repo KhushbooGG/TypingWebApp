@@ -46,16 +46,16 @@ namespace TypingWebApp.Controllers
 
         public IActionResult AddInstitute()
         {
-           
+
             return View();
         }
 
         public IActionResult InstituteReport()
         {
-            var report=_context.Institute.ToList();
+            var report = _context.Institute.ToList();
             return View(report);
 
-            
+
         }
 
         public IActionResult StudentReport()
@@ -63,11 +63,18 @@ namespace TypingWebApp.Controllers
             var report = _context.Students.ToList();
             return View(report);
         }
-            
+
         public IActionResult InstructorReport()
         {
             var instructorreport = _context.Instructor.ToList();
             return View(instructorreport);
         }
+        public IActionResult AddNotice()
+        {
+            var user = _context.Users.ToList();
+            return View(user);
+        }
+           
     }
+}
 }

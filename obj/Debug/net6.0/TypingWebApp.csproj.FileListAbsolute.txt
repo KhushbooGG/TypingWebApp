@@ -611,3 +611,4 @@ C:\Users\TIRANGA\Source\Repos\TypingWebApp\obj\Debug\net6.0\refint\TypingWebApp.
 C:\Users\TIRANGA\Source\Repos\TypingWebApp\obj\Debug\net6.0\TypingWebApp.pdb
 C:\Users\TIRANGA\Source\Repos\TypingWebApp\obj\Debug\net6.0\TypingWebApp.genruntimeconfig.cache
 C:\Users\TIRANGA\Source\Repos\TypingWebApp\obj\Debug\net6.0\ref\TypingWebApp.dll
+D:\TypingProjectV1\TypingWebApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
