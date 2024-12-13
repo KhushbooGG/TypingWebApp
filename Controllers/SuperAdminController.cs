@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using TypingWebApp.Models;
 
 namespace TypingWebApp.Controllers
@@ -72,9 +73,29 @@ namespace TypingWebApp.Controllers
         public IActionResult AddNotice()
         {
             var user = _context.Users.ToList();
-            return View(user);
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var item in user)
+            {
+                list.Add(new SelectListItem(item.Username, item.Id.ToString()));
+            }
+
+            TempData["UsersList"] = list;
+          
+            return View();
         }
-           
+        public IActionResult SaveNotice()
+        {
+            var touserid=Request.Form["ToUserId"];
+            var noticetext = Request.Form["NoticeText"];
+            Notice notice = new Notice();
+            notice.ToUserId = Convert.ToInt32(touserid);
+            notice.NoticeText = noticetext;
+            _context.Notice.Add(notice);
+            _context.SaveChanges();
+
+            return View();
+        }
+
     }
 }
-}
+

@@ -10,11 +10,11 @@ namespace TypingWebApp.Models
          
 
         }
-        public DbSet<Users> Users { get; set; }
+        public DbSet<Users> Users { get; set; } = null!;
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Institute> Institute { get; set; }      
         public DbSet<Students> Students { get; set; }
         public DbSet<Instructor> Instructor { get; set; }
-        public DbSet<Notice> Notice { get; set; }
+        public DbSet<Notice> Notice { get; set; } = null!;
     }
 }

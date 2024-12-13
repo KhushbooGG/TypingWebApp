@@ -2,8 +2,8 @@
 {
     public class Notice
     {
-        public int Id { get; set; }
-        public string ToUserId { get; set; }
-        public string NoticeText { get; set; }
+        public int? Id { get; set; }
+        public int? ToUserId { get; set; } 
+        public string? NoticeText { get; set; }
     }
 }
