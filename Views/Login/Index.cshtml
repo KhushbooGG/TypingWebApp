@@ -1,22 +1,30 @@
 ﻿@{
-    Layout= null;
+    Layout = null;
 }
 
-<form method="post">
-    <label style="color:red; font-weight:bold;" >@ViewBag.Message</label>
-    <br />
-    <table>
-        <tr>
-            <td>Username:</td>
-            <td><input type="text" name="username" /></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input type="password" name="password" /></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" value="Login" asp-controller="Login"  asp-action="LoginUser"/></td>
-        </tr>
-    </table>
-</form>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" asp-append-version="true" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="wrapper">
+    <div class="text-center mt-4 name">
+        ESwift Computer Typing
+    </div>
+    <form class="p-3 mt-3" method="post">
+        <label style="color:red; font-weight:bold;">@ViewBag.Message</label>
+        <br />
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="username" id="username" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <input class="btn mt-3" type="submit" value="Login" asp-controller="Login" asp-action="LoginUser" />
+    </form>
+</div>

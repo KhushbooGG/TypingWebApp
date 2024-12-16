@@ -289,6 +289,10 @@
       "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsmaterial.woff2"
     },
     {
+      "Id": "D:\\TypingProjectV1\\TypingWebApp\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\TypingProjectV1\\TypingWebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

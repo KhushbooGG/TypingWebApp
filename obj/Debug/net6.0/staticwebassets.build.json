@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ptrthe9RfcRv8g3K5EYcRTy7X13tq8FzC1RmJSDtH/g=",
+  "Hash": "LVkYUQ3tIm5aP+xs4eGJue7tNSHuUgmKZlyvcb7K6xg=",
   "Source": "TypingWebApp",
   "BasePath": "_content/TypingWebApp",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\devextreme\\icons\\dxiconsmaterial.woff2"
+    },
+    {
+      "Identity": "D:\\TypingProjectV1\\TypingWebApp\\wwwroot\\css\\login.css",
+      "SourceId": "TypingWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TypingProjectV1\\TypingWebApp\\wwwroot\\",
+      "BasePath": "_content/TypingWebApp",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\TypingProjectV1\\TypingWebApp\\wwwroot\\css\\site.css",
